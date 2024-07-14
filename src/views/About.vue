@@ -4,7 +4,7 @@
       <!-- Left column (Profile) - Increased width -->
       <div class="lg:w-2/5 mb-8 lg:mb-0">
         <div class="max-w-md mx-auto border-4 border-red-500 rounded-xl p-8 flex flex-col items-center">
-          <img src="/about/About-image.jpg" alt="Amarjeet Singh" class="w-full mb-6 rounded-lg">
+          <img src="/about/About-image.jpg" alt="Amarjeet Singh" class="w-full mb-6 rounded-lg" loading="lazy">
           <h2 class="text-4xl font-bold text-red-500 mb-6 text-center">Amarjeet<br/>Singh</h2>
           <div class="flex space-x-8">
             <a v-for="link in socialLinks" :key="link.name" :href="link.url" target="_blank" rel="noopener noreferrer">
