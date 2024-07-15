@@ -1,5 +1,5 @@
 <template>
-  <div class="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+  <div class="py-16 sm:py-24 md:py-36 lg:py-44 xl:py-52">
     <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray11 mb-2 sm:mb-3 md:mb-4">Hello, I'm</h1>
     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-red11 tracking-wider mb-4 sm:mb-6">Amarjeet C. Singh</h1>
     <p class="max-w-5xl text-sm sm:text-base md:text-lg font-normal text-left text-gray11 leading-relaxed mb-6 sm:mb-8">
@@ -27,10 +27,9 @@
 <script setup>
     import { ref } from 'vue'
 
-    const description = ref(`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ratione ullam sapiente harum soluta animi,
-        consectetur, numquam maiores amet architecto voluptates reprehenderit repellat explicabo cum possimus sequi,
-        maxime vitae rem nisi ea consequuntur. Voluptatum cumque fugiat eos praesentium possimus, asperiores dolore
-        labore ullam, omnis quia quod, soluta excepturi? Accusamus, vel.`)
+    const description = ref(`Recent graduate with a passion for web development, ready to make my mark in the digital world.
+                            Equiped with a strong foundation in HTML, CSS and JavaScript. I'm eager to create a responsive
+                            and user-friendly websites. I'm constantly learning and exploring new technologies to stay up-to-date.`)
 
     const socialLinks = ref([
         { name: 'linkedin', url: 'https://www.linkedin.com/in/amarjeet-singh-8a768a202', icon: 'logo-linkedin'},

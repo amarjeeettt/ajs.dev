@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white rounded-2xl border-2 border-gray-300 overflow-hidden shadow-lg">
         <!-- Image section -->
-        <img :src="project.image" :alt="project.title" class="w-full md:w-auto h-lg md:h-auto object-scale-down" loading="lazy">
+        <img :src="project.image" :alt="project.title" class="w-full md:w-auto h-lg md:h-auto object-scale-down border-b-2 border-gray-300" loading="lazy">
         <!-- Content section -->
         <div class="p-4 flex justify-between items-center">
             <!-- Project details -->
@@ -19,7 +19,7 @@
             </div>
 
             <!-- GitHub link -->
-            <a href="#" class="text-gray-600 hover:text-gray-900">
+            <a :href="project.link" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900">
                 <ion-icon name="logo-github" class="text-4xl"></ion-icon>
             </a>
         </div>

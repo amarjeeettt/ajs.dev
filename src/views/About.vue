@@ -25,7 +25,7 @@
             <br/><br/>
             Throughout my professional and personal life, I strive to live by the following motto:
             <br/><br/>
-            "Be the best version of yourself in anything that you do. You don't have to live anybody else's story." - Stephen Curry
+            <i>"Be the best version of yourself in anything that you do. You don't have to live anybody else's story."</i> - Stephen Curry
           </p>
         </section>
 
