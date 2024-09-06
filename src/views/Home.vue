@@ -79,7 +79,7 @@ const socialLinks = ref([
 ]);
 
 const previewPDF = () => {
-  const pdfPath = `${import.meta.env.BASE_URL}Singh, Amarjeet C.pdf`;
+  const pdfPath = `${import.meta.env.BASE_URL}resume/Amarjeet-Singh-Resume.pdf`;
   window.open(pdfPath, "_blank");
 };
 </script>
