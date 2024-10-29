@@ -22,6 +22,7 @@
             :src="image.url"
             :alt="image.alt"
             class="w-full h-full object-cover transition-all duration-500 ease-out hover:scale-105 group-hover:scale-105"
+            loading="lazy"
           />
         </div>
       </div>
