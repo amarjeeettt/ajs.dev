@@ -1,6 +1,6 @@
 <template>
   <header
-    class="sticky top-0 z-50 transition-all duration-300 ease-in-out container mx-auto px-4 py-6 flex justify-between items-center bg-gradient-to-r from-white/80 via-white/50 to-white/80 dark:from-gray-950/80 dark:via-gray-950/50 dark:to-gray-950/80 backdrop-blur-md"
+    class="sticky top-0 z-50 transition-all duration-300 ease-in-out container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center bg-gradient-to-r from-white/80 via-white/50 to-white/80 dark:from-gray-950/80 dark:via-gray-950/50 dark:to-gray-950/80 backdrop-blur-md"
   >
     <!-- Logo -->
     <div
@@ -154,8 +154,11 @@
                   delay: index * 100,
                 },
               }"
-              class="mobile-nav-link"
-              :class="[isActiveRoute(link.name) && 'mobile-nav-link-active']"
+              class="relative block w-full px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 hover:bg-gray-100 dark:hover:bg-gray-800/50 hover:text-red-600"
+              :class="[
+                isActiveRoute(link.name) &&
+                  'bg-gray-50 dark:bg-gray-800/30 text-red-600',
+              ]"
             >
               {{ link.text }}
             </RouterLink>
@@ -206,17 +209,6 @@ watch(
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-.mobile-nav-link {
-  @apply relative block w-full px-4 py-2.5 text-sm font-medium
-         rounded-lg transition-all duration-200
-         hover:bg-gray-100 dark:hover:bg-gray-800/50
-         hover:text-red-600;
-}
-
-.mobile-nav-link-active {
-  @apply bg-gray-50 dark:bg-gray-800/30 text-red-600;
 }
 
 .menu-icon {

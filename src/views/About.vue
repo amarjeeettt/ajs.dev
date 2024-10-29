@@ -36,19 +36,16 @@
         data-aos="fade-up"
         data-aos-delay="800"
         data-aos-once="true"
-        class="text-gray-600 text-justify font-light text-md leading-relaxed"
+        class="text-gray-600 text-justify text-md leading-relaxed"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        tenetur perspiciatis quis voluptates velit nisi quos maiores fuga at
-        cumque autem aperiam, consectetur nobis! Ratione quisquam dignissimos ab
-        eligendi obcaecati reiciendis iusto nihil quibusdam delectus ipsam
-        doloremque nesciunt quia repudiandae culpa eveniet, velit aliquam.
-        Quidem distinctio est totam eum, laboriosam quisquam velit maiores quam,
-        quod esse reiciendis voluptatum adipisci. Adipisci soluta non quis
-        nihil, magnam quam excepturi dolorem unde hic impedit aspernatur modi
-        eum vitae quia. Sint, et quibusdam? Esse eum nemo error dolore explicabo
-        autem, enim officiis tenetur, nisi maxime repellat illum facilis harum
-        similique vel et id pariatur.
+        Hey there! I'm Amarjeet Singh, a Computer Engineering graduate from
+        Southern Luzon State University who loves diving into full-stack web
+        development. My journey through internships and projects has helped me
+        master modern tools like Vue.js, Next.js, and Flask. I love building
+        things that not only work great but also make sense for the people using
+        them - from speedy web apps to practical solutions like my Pay-Per-Print
+        kiosk system. Every line of code I write is driven by my excitement to
+        create something truly useful.
       </p>
     </section>
 
@@ -220,7 +217,7 @@ const skills = ref([
   { name: "HTML", icon: "devicon-html5-plain" },
   { name: "CSS", icon: "devicon-css3-plain" },
   { name: "Vue.js", icon: "devicon-vuejs-plain-wordmark" },
-  { name: "React.js", icon: "devicon-react-original" },
+  { name: "React", icon: "devicon-react-original" },
   { name: "Next.js", icon: "devicon-nextjs-plain" },
   { name: "Tailwind CSS", icon: "devicon-tailwindcss-original" },
   { name: "Bootstrap", icon: "devicon-bootstrap-plain" },
