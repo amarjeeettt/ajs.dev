@@ -16,7 +16,12 @@
           :data-aos="'fade-up'"
           :data-aos-delay="200 * index"
           data-aos-once="true"
-          class="w-[32%] aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden group"
+          :class="[
+            'w-[32%] aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden group',
+            index !== 1
+              ? 'md:block hidden'
+              : 'w-[75%] mx-auto md:w-[32%] md:mx-0',
+          ]"
         >
           <img
             :src="image.url"
@@ -48,7 +53,11 @@
     </section>
 
     <!-- Work Experience Section -->
-    <section data-aos="fade-up" data-aos-once="true" class="mb-12 sm:mb-16">
+    <section
+      data-aos="fade-up"
+      data-aos-once="true"
+      class="mb-12 sm:mb-16 px-4 max-w-7xl mx-auto"
+    >
       <h2
         class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-red-600"
       >
@@ -63,28 +72,37 @@
         :key="index"
       >
         <CardContent class="flex items-center p-2">
-          <img
-            :src="experience.logo"
-            alt="iBuild-logo"
-            class="w-12 h-12 mr-3 flex-shrink-0 border-2 rounded-full"
-          />
-          <div>
-            <h3 class="font-semibold">{{ experience.title }}</h3>
+          <div class="flex-shrink-0 self-center mr-3">
+            <img
+              :src="experience.logo"
+              alt="iBuild-logo"
+              class="w-12 h-12 border rounded-full"
+            />
+          </div>
+          <div class="flex-grow">
+            <h3 class="font-semibold text-lg">{{ experience.title }}</h3>
             <p class="text-sm font-light text-gray-500">
               {{ experience.company }}
             </p>
+            <span class="text-sm font-light text-gray-500 block sm:hidden mt-1">
+              {{ experience.duration }}
+            </span>
           </div>
-          <div class="ml-auto">
-            <span class="text-sm font-light text-gray-500">{{
-              experience.duration
-            }}</span>
+          <div class="hidden sm:block">
+            <span class="text-sm font-light text-gray-500">
+              {{ experience.duration }}
+            </span>
           </div>
         </CardContent>
       </Card>
     </section>
 
     <!-- Education Section -->
-    <section data-aos="fade-up" data-aos-once="true" class="mb-12 sm:mb-16">
+    <section
+      data-aos="fade-up"
+      data-aos-once="true"
+      class="mb-12 sm:mb-16 px-4 max-w-7xl mx-auto"
+    >
       <h2
         class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-red-600"
       >
@@ -96,21 +114,22 @@
         class="p-4 border border-red-200 rounded-lg transition-all duration-300 ease-in-out mb-4 hover:shadow-[0_5px_10px_rgba(240,128,128,0.15)] hover:border-red-300"
       >
         <CardContent class="flex items-center p-2">
-          <img
-            src="/about/SLSU-logo.png"
-            alt="SLSU-logo"
-            class="w-12 h-12 mr-3 flex-shrink-0"
-          />
-          <div>
-            <h3 class="font-semibold">
+          <div class="flex-shrink-0 self-center mr-3">
+            <img src="/about/SLSU-logo.png" alt="SLSU-logo" class="w-12 h-12" />
+          </div>
+          <div class="flex-grow">
+            <h3 class="font-semibold text-lg">
               Bachelor of Science in Computer Engineering
             </h3>
             <p class="text-sm font-light text-gray-500">
               Southern Luzon State University
             </p>
+            <span class="text-sm text-gray-500 font-light block sm:hidden mt-1">
+              2020 - 2024
+            </span>
           </div>
-          <div class="ml-auto">
-            <span class="text-sm text-gray-500 font-light">2020 - 2024</span>
+          <div class="hidden sm:block">
+            <span class="text-sm text-gray-500 font-light"> 2020 - 2024 </span>
           </div>
         </CardContent>
       </Card>
@@ -153,7 +172,7 @@ import "aos/dist/aos.css";
 // Initialize AOS
 onMounted(() => {
   AOS.init({
-    offset: 100,
+    offset: 50,
     duration: 800,
     easing: "ease-out",
     once: true,
@@ -162,15 +181,15 @@ onMounted(() => {
 
 const images = ref([
   {
-    url: "/about/portrait-1.JPG",
+    url: "/about/portrait-1.webp",
     alt: "Portrait 1",
   },
   {
-    url: "/about/portrait-2.JPG",
+    url: "/about/portrait-2.webp",
     alt: "Portrait 2",
   },
   {
-    url: "/about/portrait-3.JPG",
+    url: "/about/portrait-3.webp",
     alt: "Portrait 3",
   },
 ]);

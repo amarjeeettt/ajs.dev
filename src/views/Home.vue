@@ -57,7 +57,7 @@
       appear
       class="w-full"
     >
-      <h2 class="text-6xl sm:text-7xl md:text-8xl font-black mb-8 text-nowrap">
+      <h2 class="text-5xl md:text-8xl font-black mb-8 text-nowrap">
         <span
           class="text-red-600"
           v-motion
@@ -124,12 +124,12 @@
         Download CV
       </Button>
     </div>
-
-    <!-- Contact Circle -->
-    <ContactCircle
-      class="fixed right-4 sm:right-8 lg:right-10 bottom-8 sm:bottom-10 lg:bottom-12 z-50"
-    />
   </main>
+
+  <!-- Contact Circle -->
+  <div class="absolute bottom-4 right-[5%] sm:right-[8%] lg:right-[10%] z-50">
+    <ContactCircle />
+  </div>
 </template>
 
 <script setup>
