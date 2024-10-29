@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 font-geist">
-    <SiteNavigation />
+  <main class="max-w-5xl mx-auto min-h-screen text-stone-800 font-geist">
+    <NavBar />
     <RouterView />
-  </div>
+  </main>
 </template>
 
 <script setup>
 import { RouterView } from "vue-router";
-import SiteNavigation from "./components/SiteNavigation.vue";
+import NavBar from "./views/components/NavBar.vue";
 </script>

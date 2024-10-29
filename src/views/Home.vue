@@ -1,82 +1,148 @@
 <template>
-  <div class="py-16 sm:py-24 md:py-36 lg:py-44 xl:py-52">
-    <h1
-      class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray11 mb-2 sm:mb-3 md:mb-4"
-    >
-      Hello, I'm
-    </h1>
-    <h1
-      class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-red11 tracking-wider mb-4 sm:mb-6"
-    >
-      Amarjeet C. Singh
-    </h1>
-    <p
-      class="max-w-5xl text-sm sm:text-base md:text-lg font-normal text-left text-gray11 leading-relaxed mb-6 sm:mb-8"
-    >
-      {{ description }}
-    </p>
+  <main
+    class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-[calc(90vh-88px)] text-center"
+  >
+    <!-- Greeting -->
     <div
-      class="flex flex-col sm:flex-row gap-4 sm:gap-6 text-xs sm:text-sm font-bold"
+      v-motion
+      :initial="{ opacity: 0, y: 20 }"
+      :enter="{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 800,
+          ease: 'easeOut',
+        },
+      }"
+      :delay="100"
+      :key="$route.path + '1'"
+      appear
+      class="w-full sm:w-4/5 lg:w-3/4"
     >
-      <div
-        @click="previewPDF"
-        class="cursor-pointer px-6 sm:px-8 md:px-10 py-3 sm:py-4 border sm:border-2 border-red11 text-red11 rounded-full text-center mb-4 sm:mb-0"
+      <h1
+        class="font-light text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 sm:mb-4"
       >
-        DOWNLOAD CV
-      </div>
-      <div class="hidden sm:flex sm:flex-row gap-4 sm:gap-6">
-        <a
-          v-for="link in socialLinks"
-          :key="link.name"
-          :href="link.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 md:px-10 py-3 sm:py-4 border sm:border-2 border-gray11 text-gray11 rounded-full"
+        Hi, I'm
+        <span
+          class="text-red-600"
+          v-motion
+          :initial="{ opacity: 0 }"
+          :enter="{
+            opacity: 1,
+            transition: {
+              duration: 600,
+              ease: 'easeOut',
+            },
+          }"
+          :delay="600"
         >
-          <ion-icon :name="link.icon" class="text-lg sm:text-xl"></ion-icon>
-          <span>{{ link.name }}</span>
-        </a>
-      </div>
-      <div class="flex sm:hidden gap-6 font-bold justify-center">
-        <a
-          v-for="link in socialLinks"
-          :key="link.name"
-          :href="link.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center text-gray11 hover:text-mauve12"
-        >
-          <ion-icon :name="link.icon" class="text-3xl sm:text-4xl"></ion-icon>
-        </a>
-      </div>
+          Amarjeet Singh
+        </span>
+      </h1>
     </div>
-  </div>
+
+    <!-- Title -->
+    <div
+      v-motion
+      :initial="{ opacity: 0 }"
+      :enter="{
+        opacity: 1,
+        transition: {
+          duration: 800,
+          ease: 'easeOut',
+        },
+      }"
+      :delay="1200"
+      :key="$route.path + '2'"
+      appear
+      class="w-full"
+    >
+      <h2 class="text-6xl sm:text-7xl md:text-8xl font-black mb-8 text-nowrap">
+        <span
+          class="text-red-600"
+          v-motion
+          :initial="{ opacity: 0, x: -20 }"
+          :enter="{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 800,
+              ease: 'easeOut',
+            },
+          }"
+          :delay="700"
+        >
+          Web
+        </span>
+        <span
+          v-motion
+          :initial="{ opacity: 0, x: 20 }"
+          :enter="{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 600,
+              ease: 'easeOut',
+            },
+          }"
+          :delay="1600"
+        >
+          Developer
+        </span>
+      </h2>
+    </div>
+
+    <!-- Buttons -->
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 50 }"
+      :enter="{ opacity: 1, y: 0 }"
+      :delay="2200"
+      class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+    >
+      <Button
+        @click="sendEmail"
+        variant="outline"
+        class="px-4 sm:px-6 py-2 text-xs sm:text-sm font-light tracking-wide w-full sm:w-auto"
+        v-motion
+        :initial="{ x: -50 }"
+        :enter="{ x: 0 }"
+        :delay="2400"
+      >
+        <Mail class="mr-2 h-3 sm:h-4 w-3 sm:w-4" />
+        <span class="hidden sm:inline">amarjeet060730@gmail.com</span>
+        <span class="sm:hidden">Email Me</span>
+      </Button>
+      <Button
+        @click="previewPDF"
+        class="px-4 sm:px-6 py-2 text-xs sm:text-sm font-light tracking-wide bg-red-600 hover:bg-red-600/90 w-full sm:w-auto"
+        v-motion
+        :initial="{ x: 50 }"
+        :enter="{ x: 0 }"
+        :delay="2600"
+      >
+        Download CV
+      </Button>
+    </div>
+
+    <!-- Contact Circle -->
+    <ContactCircle
+      class="fixed right-4 sm:right-8 lg:right-10 bottom-8 sm:bottom-10 lg:bottom-12 z-50"
+    />
+  </main>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-vue-next";
+import { useRoute } from "vue-router";
+import ContactCircle from "./components/ContactCircle.vue";
 
-const description = ref(
-  `Enthusiastic fresh graduate Full-Stack Developer with a strong foundation in backend development, eager to build innovative, scalable web solutions.`
-);
+const route = useRoute();
 
-const socialLinks = ref([
-  {
-    name: "linkedin",
-    url: "https://www.linkedin.com/in/amarjeet-singh-8a768a202",
-    icon: "logo-linkedin",
-  },
-  {
-    name: "github",
-    url: "https://github.com/amarjeeettt",
-    icon: "logo-github",
-  },
-  {
-    name: "facebook",
-    url: "https://www.facebook.com/profile.php?id=100002578543889&mibextid=ZbWKwL",
-    icon: "logo-facebook",
-  },
-]);
+const sendEmail = () => {
+  window.location.href = "mailto:amarjeet060730@gmail.com";
+};
 
 const previewPDF = () => {
   const pdfPath = `${import.meta.env.BASE_URL}resume/Amarjeet-Singh-Resume.pdf`;
