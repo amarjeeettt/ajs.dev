@@ -38,14 +38,12 @@
         data-aos-once="true"
         class="text-gray-600 text-justify text-md leading-relaxed"
       >
-        Hey there! I'm Amarjeet Singh, a Computer Engineering graduate from
-        Southern Luzon State University who loves diving into full-stack web
-        development. My journey through internships and projects has helped me
-        master modern tools like Vue.js, Next.js, and Flask. I love building
-        things that not only work great but also make sense for the people using
-        them - from speedy web apps to practical solutions like my Pay-Per-Print
-        kiosk system. Every line of code I write is driven by my excitement to
-        create something truly useful.
+        Hey there! I'm Amarjeet Singh, a Junior Software Engineer focused on
+        building full-stack web applications using Next.js, TypeScript, and
+        Prisma. My role involves developing user-friendly features, working with
+        databases, and writing clean and maintainable code. I enjoy learning new
+        technologies and building practical solutions that make everyday tasks
+        easier.
       </p>
     </section>
 
