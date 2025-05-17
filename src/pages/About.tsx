@@ -2,30 +2,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 export default function About() {
-  const images = [
-    {
-      url: "/src/assets/about/portrait-1.webp",
-      alt: "Portrait 1",
-    },
-    {
-      url: "/src/assets/about/portrait-2.webp",
-      alt: "Portrait 2",
-    },
-    {
-      url: "/src/assets/about/portrait-3.webp",
-      alt: "Portrait 3",
-    },
-  ];
+  const images = Array.from({ length: 3 }, (_, i) => ({
+    url: `/about/portrait-${i + 1}.webp`,
+    alt: `Portrait ${i + 1}`,
+  }));
 
   const workExperiences = [
     {
-      logo: "/src/assets/about/Sunfund-logo.jpeg",
+      logo: "/about/Sunfund-logo.jpeg",
       title: "Junior Software Developer",
       company: "Sunfund PH",
       duration: "Nov 2024 - Present",
     },
     {
-      logo: "/src/assets/about/iBuild-logo.jpg",
+      logo: "/about/iBuild-logo.jpg",
       title: "Web Developer Intern",
       company: "i-Build.PH Web Services and Solutions",
       duration: "February - March 2024",
@@ -68,7 +58,9 @@ export default function About() {
 
         <div className="flex justify-between gap-4 mb-6">
           {images.map((image, index) => {
-            const isMiddle = index === 1;
+            const middleIndex = Math.floor(images.length / 2);
+            const isMiddle = index === middleIndex;
+
             const containerClass = isMiddle
               ? "w-[75%] mx-auto md:w-[32%] md:mx-0"
               : "hidden md:block w-[32%]";
@@ -145,7 +137,7 @@ export default function About() {
           <CardContent className="flex items-center p-2">
             <div className="flex-shrink-0 self-center mr-3">
               <img
-                src="/src/assets/about/SLSU-logo.png"
+                src="/about/SLSU-logo.png"
                 alt="SLSU-logo"
                 className="w-12 h-12"
               />
