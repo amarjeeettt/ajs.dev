@@ -4,7 +4,7 @@ import { Mail, Download } from "lucide-react";
 
 export default function Home() {
   const sendEmail = () => {
-    const email = process.env.CONTACT_EMAIL;
+    const email = import.meta.env.VITE_CONTACT_EMAIL;
     window.location.href = `mailto:${email}`;
   };
 
