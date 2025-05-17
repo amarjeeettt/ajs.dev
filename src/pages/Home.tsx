@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+
 import { Button } from "@/components/ui/button";
 import { Mail, Download } from "lucide-react";
 
@@ -26,7 +27,7 @@ export default function Home() {
         className="w-full sm:w-4/5 lg:w-3/4 mb-2"
       >
         <h1 className="font-light text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-          Hi, I&apos;m{" "}
+          <span>Hi, I&apos;m</span>{" "}
           <motion.span
             initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
             animate={{

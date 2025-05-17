@@ -96,7 +96,7 @@ export default function Navbar() {
         ))}
 
         {/* Social Icons for Desktop*/}
-        <div className="flex items-center gap-4 pl-4 border-l border-gray-200 dark:border-gray-700">
+        <div className="flex items-center gap-4 pl-4 border-l border-gray-200">
           {socialLinks.map((social, index) => (
             <motion.a
               key={social.label}
@@ -104,7 +104,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.label}
-              className="text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-500 transition-colors"
+              className="text-gray-600 hover:text-red-600 transition-colors"
               initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
               animate={{
                 opacity: 1,
@@ -140,7 +140,7 @@ export default function Navbar() {
                 variant="ghost"
                 size="icon"
                 aria-label={isOpen ? "Close menu" : "Open menu"}
-                className="hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center justify-center"
+                className="hover:bg-gray-100 flex items-center justify-center"
               >
                 <div className="relative w-5 h-5 flex items-center justify-center">
                   <Menu
@@ -186,9 +186,8 @@ export default function Navbar() {
                     className={({ isActive }) =>
                       cn(
                         "block w-full px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-200",
-                        isActive &&
-                          "bg-gray-50 dark:bg-gray-800/30 text-red-600",
-                        "hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-500"
+                        isActive && "bg-gray-50 text-red-600",
+                        "hover:bg-gray-200 hover:text-red-600"
                       )
                     }
                   >
@@ -198,8 +197,8 @@ export default function Navbar() {
               ))}
 
               {/* Social Links for Mobile */}
-              <div className="mt-2 pt-2 border-t border-gray-100 dark:border-gray-800">
-                <div className="px-4 py-2 text-xs font-medium text-gray-500 dark:text-gray-400">
+              <div className="mt-2 pt-2 border-t border-gray-100">
+                <div className="px-4 py-2 text-xs font-medium text-gray-500">
                   Connect
                 </div>
                 <div className="flex gap-2 px-4 py-2">
@@ -210,7 +209,7 @@ export default function Navbar() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-center h-9 w-9 rounded-lg bg-gray-50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-500 transition-colors"
+                      className="flex items-center justify-center h-9 w-9 rounded-lg bg-gray-50 text-gray-700 hover:text-red-600 transition-colors"
                       aria-label={social.label}
                       initial={{ scale: 0 }}
                       animate={{

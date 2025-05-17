@@ -1,5 +1,6 @@
-import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
+
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
 
@@ -16,7 +17,7 @@ export default function Projects() {
         }}
         className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black sm:whitespace-nowrap md:whitespace-normal leading-tight"
       >
-        <span className="text-red-600">Projects</span>{" "}
+        <span className="text-red-600 inline-block">Projects</span>{" "}
         <motion.span
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           animate={{
@@ -39,7 +40,7 @@ export default function Projects() {
           filter: "blur(0px)",
           transition: { delay: 0.9, duration: 0.8, ease: "easeInOut" },
         }}
-        className="text-lg font-light text-gray-600 my-6 md:my-8 max-w-md mx-auto"
+        className="text-lg font-light text-gray-600 my-4 md:my-6 max-w-md mx-auto"
       >
         I&apos;m currently building this section of my portfolio.
         <br />
@@ -47,12 +48,12 @@ export default function Projects() {
       </motion.p>
 
       <motion.div
-        initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+        initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
         animate={{
           opacity: 1,
           y: 0,
           filter: "blur(0px)",
-          transition: { delay: 1.4, duration: 0.8, ease: "easeInOut" },
+          transition: { delay: 1.2, duration: 0.8, ease: "easeInOut" },
         }}
         className="transition-transform duration-200 ease-in-out hover:scale-105"
       >
