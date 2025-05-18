@@ -10,19 +10,25 @@ export default function About() {
       {/* About Section */}
       <section className="mb-12 sm:mb-16">
         <motion.h2
-          initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ delay: 0.2, duration: 0.8, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.1 }}
+          initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            transition: { delay: 0.1, duration: 0.8, ease: "easeInOut" },
+          }}
           className="text-3xl sm:text-4xl font-bold text-red-600"
         >
           About
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.1 }}
+          initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            transition: { delay: 0.5, duration: 0.8, ease: "easeInOut" },
+          }}
           className="text-md sm:text-lg text-gray-500 mb-6 sm:mb-8 font-extralight"
         >
           A glimpse into me.
@@ -40,15 +46,18 @@ export default function About() {
             return (
               <motion.div
                 key={index}
-                className={`aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden group ${containerClass}`}
                 initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
-                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{
-                  delay: 0.5 + index * 0.1,
-                  duration: 0.8,
-                  ease: "easeInOut",
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  filter: "blur(0px)",
+                  transition: {
+                    delay: 0.5 + index * 0.1,
+                    duration: 0.8,
+                    ease: "easeInOut",
+                  },
                 }}
-                viewport={{ once: true, amount: 0.1 }}
+                className={`aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden group ${containerClass}`}
               >
                 <img
                   src={image.url}
@@ -62,11 +71,14 @@ export default function About() {
         </div>
 
         <motion.p
-          className="text-gray-500 text-justify text-md leading-relaxed"
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ delay: 1.0, duration: 0.8, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            transition: { delay: 1.0, duration: 0.8, ease: "easeInOut" },
+          }}
+          className="text-gray-500 text-justify text-md leading-relaxed"
         >
           Hey there! I'm Amarjeet Singh, a Junior Software Engineer focused on
           building full-stack web applications using Next.js, TypeScript, and
@@ -79,11 +91,11 @@ export default function About() {
 
       {/* Work Experience Section */}
       <motion.section
-        className="mb-12 sm:mb-16 px-6 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ delay: 1.2, duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true, amount: 0.1 }}
+        className="mb-12 sm:mb-16 px-6 max-w-7xl mx-auto"
       >
         <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-red-600">
           Work Experience
@@ -115,11 +127,11 @@ export default function About() {
 
       {/* Education Section */}
       <motion.section
-        className="mb-12 sm:mb-16 px-4 max-w-7xl mx-auto"
         initial={{ opacity: 0, x: -20, filter: "blur(4px)" }}
         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true, amount: 0.5 }}
+        className="mb-12 sm:mb-16 px-4 max-w-7xl mx-auto"
       >
         <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-red-600">
           Education
